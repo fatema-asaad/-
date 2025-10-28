@@ -261,10 +261,10 @@ document.addEventListener("DOMContentLoaded", () => {
  "هدفنا": "Our Goal",
     " رؤيتنا": "Our Vision",
    " رسالتنا": "Our Message",
-    مسؤول عن ال :"responsible for",
-    رؤيتنا:"Our Vision",
-    رسالتنا:"Our Message",
-    مسؤولة عن:"responsible for",
+   " مسؤول عن ال ":"responsible for",
+   " رؤيتنا":"Our Vision",
+   " رسالتنا":"Our Message",
+   " مسؤولة عن":"responsible for",
    "نبذة عن الدليل":"About the Guide",
    "فريق العمل / الشركاء":"Mates/Work team",
   "سياسات ومعايير نشر الفعاليات":"Policies and Standeres for Publishing Events","معايير القبول: نفضل الفعاليات التي تلتزم بالقوانين المحلية، وتراعي السلامة العامة، وتملك منظّمًا واضحًا.": 
@@ -406,4 +406,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   
+
 
