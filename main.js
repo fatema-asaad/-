@@ -14,6 +14,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const filterLocation = document.getElementById("filter-location");
   const filterDate = document.getElementById("filter-date");
   const cards = document.querySelectorAll(".event-card");
+if (filterCategory) filterCategory.addEventListener("change", filterEvents);
+if (filterLocation) filterLocation.addEventListener("change", filterEvents);
+if (filterDate) filterDate.addEventListener("change", filterEvents);
+  
 
   // دالة فلترة الفعاليات
   function filterEvents() {
@@ -406,5 +410,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   
+
 
 
