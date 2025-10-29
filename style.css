@@ -1,4 +1,4 @@
-/* 🎨 الألوان */
+/*  الألوان */
 :root {
   --main-color: #0E7A81;
   --accent-color: #6CAFBF;
@@ -24,7 +24,7 @@ body {
 }
 
 
-/* 🌊 تأثير حركة خفيفة بالخلفية */
+/*  تأثير حركة خفيفة بالخلفية */
 body::before {
   content: "";
   position: fixed;
@@ -276,7 +276,7 @@ section img:first-of-type {
   }
 }
 }/*  تنسيق صور قسم المعرض بحيث تكون في صف واحد بنفس المقاس */
-div.gallery {<img src="https://cdn.sananews.sy/2025/09/SAVE_%D9%A2%D9%A0%D9%A2%D9%A5%D9%A0%D9%A9%D9%A1%D9%A7_%D9%A2%D9%A3%D9%A0%D9%A8%D9%A2%D9%A7-1536x1024.jpg" width="400" height="300" alt="صورة من الفعالية">
+div.gallery {
   display: flex;
   justify-content: center; /* لتوسيط الصف */
   align-items: flex-start;
@@ -291,6 +291,7 @@ div.gallery img {<img src="https://cdn.sananews.sy/2025/09/SAVE_%D9%A2%D9%A0%D9%
   box-shadow: 0 5px 12px rgba(0, 0, 0, 0.25);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 
 
 
