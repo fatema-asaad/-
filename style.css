@@ -275,7 +275,17 @@ section img:first-of-type {
     font-size: 14px;
   }
 }
+}/*  تنسيق صور قسم المعرض بحيث تكون في صف واحد بنفس المقاس */
+div.gallery {
+  display: flex;
+  justify-content: center; /* لتوسيط الصف */
+  align-items: flex-start;
+  flex-wrap: wrap; /* في حال كانت الشاشة صغيرة */
+  gap: 10px; /* مسافة بين الصور */
 }
+
+
+
 
 
 
