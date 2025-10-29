@@ -283,6 +283,15 @@ div.gallery {
   flex-wrap: wrap; /* في حال كانت الشاشة صغيرة */
   gap: 10px; /* مسافة بين الصور */
 }
+div.gallery img {
+  width: 400px !important;  /* نفس عرض الصور في HTML */
+  height: 300px !important; /* نفس الارتفاع */
+  object-fit: cover;        /* يحافظ على شكل الصورة بدون تمدد */
+  border-radius: 10px;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
 
 
 
