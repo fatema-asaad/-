@@ -14,10 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const filterLocation = document.getElementById("filter-location");
   const filterDate = document.getElementById("filter-date");
   const cards = document.querySelectorAll(".event-card");
-if (filterCategory) filterCategory.addEventListener("change", filterEvents);
-if (filterLocation) filterLocation.addEventListener("change", filterEvents);
-if (filterDate) filterDate.addEventListener("change", filterEvents);
-  
 
   // دالة فلترة الفعاليات
   function filterEvents() {
@@ -93,6 +89,19 @@ if (filterDate) filterDate.addEventListener("change", filterEvents);
     }
   }
 
+  // إضافة مستمعي الأحداث للحقول
+  if (filterCategory) {
+    filterCategory.addEventListener("change", filterEvents);
+  }
+  
+  if (filterLocation) {
+    filterLocation.addEventListener("change", filterEvents);
+  }
+  
+  if (filterDate) {
+    filterDate.addEventListener("change", filterEvents);
+  }
+
   // زر مسح الفلاتر
   const clearFiltersBtn = document.getElementById("clear-filters");
   if (clearFiltersBtn) {
@@ -115,6 +124,39 @@ if (filterDate) filterDate.addEventListener("change", filterEvents);
       });
     });
   }
+
+  // فلترة الفعاليات القديمة (للتوافق مع الأزرار)
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  if (filterButtons.length > 0) {
+    filterButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const category = btn.getAttribute("data-category");
+        
+        // تحديث حقل التصنيف
+        if (filterCategory) {
+          filterCategory.value = category;
+        }
+
+        cards.forEach(card => {
+          if (category === "all" || card.classList.contains(category)) {
+            card.style.display = "block";
+            card.style.animation = "fadeIn 0.5s ease-in-out";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      });
+    });
+  }
+
+  // إضافة وظيفة showAlert العامة
+  window.showAlert = function(msg) {
+    const alertBox = document.getElementById("formAlert");
+    if (alertBox) {
+      alertBox.innerHTML = `<p>${msg}</p>`;
+    }
+  };
+
 });
 
 
@@ -265,10 +307,6 @@ document.addEventListener("DOMContentLoaded", () => {
  "هدفنا": "Our Goal",
     " رؤيتنا": "Our Vision",
    " رسالتنا": "Our Message",
-   " مسؤول عن ال ":"responsible for",
-   " رؤيتنا":"Our Vision",
-   " رسالتنا":"Our Message",
-   " مسؤولة عن":"responsible for",
    "نبذة عن الدليل":"About the Guide",
    "فريق العمل / الشركاء":"Mates/Work team",
   "سياسات ومعايير نشر الفعاليات":"Policies and Standeres for Publishing Events","معايير القبول: نفضل الفعاليات التي تلتزم بالقوانين المحلية، وتراعي السلامة العامة، وتملك منظّمًا واضحًا.": 
@@ -407,9 +445,8 @@ document.addEventListener("DOMContentLoaded", () => {
   if (enFlag) enFlag.addEventListener("click", () => switchLang("en"));
 });
 
-
-
   
+
 
 
 
